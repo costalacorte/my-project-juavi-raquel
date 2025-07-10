@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import RecipesData from '../recipes.json';
+import React, { useState } from "react";
+import RecipesData from "../recipes.json";
+import ListItem from "./ListItem";
 
 const List = () => {
   const [recipes, setRecipes] = useState(RecipesData);
@@ -12,15 +13,10 @@ const List = () => {
   return (
     <ul>
       {recipes.map((recipeItem) => (
-        <li key={recipeItem.id}>
-          <p>
-            <strong>Dish:</strong> {recipeItem.name} <br />
-            {recipeItem.calories < 275
-              ? '✅ RELAX EAT CAKE'
-              : '❌ EAT VEGGIES BASTARD'}
-          </p>
-          <button onClick={() => handleDelete(recipeItem.id)}>DELETE</button>
-        </li>
+        <ListItem        
+        key = {recipeItem.id} 
+        recipeItem ={recipeItem} 
+        handleDelete={handleDelete}/>
       ))}
     </ul>
   );
