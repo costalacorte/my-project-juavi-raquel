@@ -1,7 +1,29 @@
 .App {
   display: block;
+  background-color: blueviolet;
 }
 
 #list{
   display: flex;
+}
+
+.logo{
+  width:200px ;
+  height:200px;
+
+}
+
+.navbar {
+  display: block;
+  background-color: fuchsia;
+  width: 100vw;
+  align-items: center;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
 }
