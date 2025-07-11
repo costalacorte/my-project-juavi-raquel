@@ -1,22 +1,15 @@
-import React, { useState } from "react";
-import RecipesData from "../recipes.json";
+import React from "react";
 import ListItem from "./ListItem";
 
-const List = () => {
-  const [recipes, setRecipes] = useState(RecipesData);
-
-  const handleDelete = (id) => {
-    const updatedRecipes = recipes.filter((recipe) => recipe.id !== id);
-    setRecipes(updatedRecipes);
-  };
-
+const List = ({ recipes, handleDelete }) => {
   return (
     <ul>
       {recipes.map((recipeItem) => (
-        <ListItem        
-        key = {recipeItem.id} 
-        recipeItem ={recipeItem} 
-        handleDelete={handleDelete}/>
+        <ListItem
+          key={recipeItem.id}
+          recipeItem={recipeItem}
+          handleDelete={handleDelete}
+        />
       ))}
     </ul>
   );

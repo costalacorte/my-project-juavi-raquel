@@ -9,6 +9,7 @@ import DashboardPage from "./components/DashboardPage";
 import Details from "./components/Details";
 import About from "./components/AboutPage";
 import NotFound from "./components/NotFound";
+import ModifyList from "./components/ModifyList";
 
 import "./App.css";
 
@@ -35,4 +36,3 @@ function App() {
 }
 
 export default App;
-

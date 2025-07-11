@@ -1,20 +1,24 @@
-import React, { useState } from "react";
-import Recipes from "../recipes.json";
-import List from "./RecipesList";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const DashboardPage = () => {
-  const [recipes, setRecipes] = useState(Recipes);
-
-  const handleDelete = (id) => {
-    setRecipes((prev) => prev.filter((item) => item.id !== id));
-  };
-
+const Sidebar = () => {
   return (
     <div>
-      <h2>Dashboard</h2>
-      <List recipes={recipes} handleDelete={handleDelete} />
+      <h2>Sidebar</h2>
+      <nav>
+        <ul>
+          <li><Link to="/">Dashboard</Link></li>
+          <li><Link to="/about">About</Link></li>
+        </ul>
+      </nav>
     </div>
   );
 };
 
-export default DashboardPage;
+export default Sidebar;
+
+
+
+
+
+
