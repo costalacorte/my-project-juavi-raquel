@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div>
-      <h2>Sidebar</h2>
+      <h2></h2>
       <nav>
         <ul>
           <li><Link to="/">Dashboard</Link></li>

@@ -15,7 +15,7 @@ function DashboardPage() {
   };
 
   return (
-    <main>
+    <main className="dashboard-container">
       <h1>Dashboard</h1>
       <ModifyList handleAdd={handleAdd} />
       <List recipes={recipes} handleDelete={handleDelete} />

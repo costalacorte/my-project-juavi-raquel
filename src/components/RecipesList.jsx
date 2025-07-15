@@ -3,9 +3,10 @@ import ListItem from "./ListItem";
 
 const List = ({ recipes, handleDelete }) => {
   return (
-    <ul>
+    <ul className="lista">
+      
       {recipes.map((recipeItem) => (
-        <ListItem
+        <ListItem 
           key={recipeItem.id}
           recipeItem={recipeItem}
           handleDelete={handleDelete}

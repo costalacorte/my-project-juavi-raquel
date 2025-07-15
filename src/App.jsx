@@ -16,11 +16,11 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
+      <header className="App-header">
+        <Navbar />
+      </header>
       <div className="App">
         <Sidebar />
-        <header className="App-header">
-          <Navbar />
-        </header>
 
         <Routes>
           <Route path="/" element={<DashboardPage />} />
