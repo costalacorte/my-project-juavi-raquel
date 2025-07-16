@@ -11,7 +11,7 @@ const DashboardPage = () => {
 
   return (
     <div>
-      <h2>Dashboard</h2>
+     
       <List recipes={recipes} handleDelete={handleDelete} />
     </div>
   );

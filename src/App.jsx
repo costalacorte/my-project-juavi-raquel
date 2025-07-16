@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { ToastContainer, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -12,7 +15,6 @@ import NotFound from "./components/NotFound";
 import ModifyList from "./components/ModifyList";
 
 import "./App.css";
-
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +30,20 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition={Bounce}
+        />
 
         <Footer />
       </div>
